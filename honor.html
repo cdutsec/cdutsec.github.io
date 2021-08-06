@@ -1,3 +1,5 @@
+<!--Originally designed by @lin714093880-->
+<!--Revise by @Clarence-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +7,24 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
     <style type="text/css">
+        .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    }
 
+    .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    img {
+    border-radius: 5px 5px 0 0;
+    }
+
+    .container {
+    padding: 2px 16px;
+}
         .hidden.menu {
             display: none;
         }
@@ -136,7 +155,68 @@
         </div>
         <div style="text-align: center;">
             <h1>荣誉</h1>
-
+        </div>
+        <!-- <div class="ui two column doubling stackable grid container">
+            <div class="column">
+                <div class="card">
+                    <img src="img/k14.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                      <h4><b>菜鸟教程</b></h4> 
+                      <p>www.runoob.com</p> 
+                    </div>
+                  </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="img/k14.jpg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                      <h4><b>菜鸟教程</b></h4> 
+                      <p>www.runoob.com</p> 
+                    </div>
+                  </div>
+            </div>
+        </div> -->
+        <div class="ui four column doubling stackable grid container" id="img-grid" style="margin: 10px">
+            <div class="column">
+                <div class="card">
+                    <img src="img/jb.png" alt="Avatar" style="width:100%">
+                    <div class="container">
+                      <h1 style="text-align: center;">竞赛成果</h1>
+                    </div>
+                  </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="img/jb.png" alt="Avatar" style="width:100%">
+                    <div class="container">
+                      <h1 style="text-align: center;">科创奖项</h1>
+                    </div>
+                  </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="img/jb.png" alt="Avatar" style="width:100%">
+                    <div class="container">
+                      <h1 style="text-align: center;">科研成果</h1>
+                    </div>
+                  </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="img/jb.png" alt="Avatar" style="width:100%">
+                    <div class="container">
+                      <h1 style="text-align: center;">攻防漏洞</h1>
+                    </div>
+                  </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <img src="img/jb.png" alt="Avatar" style="width:100%">
+                    <div class="container">
+                      <h1 style="text-align: center;">项目工程</h1>
+                    </div>
+                  </div>
+            </div>
         </div>
 
 
@@ -144,11 +224,11 @@
             <div class="ui container">
                 <div class="ui stackable inverted divided equal height stackable grid">
                     <div class="three wide column">
-                        <h4 class="ui inverted header">友情链接</h4>
-                        <div class="ui inverted link list" style="text-align: left;">
+                        <h4 class="ui inverted header">官方网站</h4>
+                        <div class="ui inverted link list">
                             <a href="http://www.cdut.edu.cn/" target="_blank" class="item">成都理工大学</a>
                             <a href="http://www.cist.cdut.edu.cn/" target="_blank" class="item">计算机与网络安全学院</a>
-
+                            <a href="http://wxc.cdut.edu.cn/" target="_blank" class="item">网络与信息化处</a>
                         </div>
                     </div>
                     <div class="three wide column">
@@ -167,7 +247,53 @@
         </div>
 
     </div>
+        <!-- <div class="ui four column doubling stackable grid container" id="img-grid" style="margin: 10px">
+            <div class="column">
+                <img src="img/k5.jpg" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k6.jpg" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k7.jpg" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k8.png" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k9.jpg" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k10.jpg" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k11.jpg" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k12.jpg" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k13.jpg" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k14.jpg" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k15.png" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/k16.png" class="ui rounded image">
+            </div>
+        </div>
 
+        <div class="ui two column doubling stackable grid container">
+            <div class="column">
+                <img src="img/kl1.png" class="ui rounded image">
+            </div>
+            <div class="column">
+                <img src="img/kl2.jpg" class="ui rounded image">
+            </div>
+        </div> -->
     <script>
         $(document).ready(function() {
             $('.masthead').visibility({
