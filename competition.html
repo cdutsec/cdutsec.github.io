@@ -5,8 +5,20 @@
 <head>
     <title>成都理工大学信息安全协会</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
     <style type="text/css">
+            .el-table__expand-icon {
+            height: 28px;
+            border: 0.5px solid gray;
+            border-radius: 50%;
+            width: 28px;
+        }
+        .el-descriptions-item__label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
             table{
 				border-collapse: collapse;/*让靠在一起的单元格只显示一个边框，边框不进行叠加*/
 			}
@@ -156,22 +168,23 @@
                 <h1 style="font-size: 2.5em;">成都理工大学信息安全协会</h1>
             </div>
         </div>
+        <br><br><br><br>
         <div style="text-align: center;">
-            <h1>竞赛名单</h1>
-            <table border="0" cellspacing="0" cellpadding="0" style="margin: 0 auto;width: 100%;height: 750px;">
-                <tr><th>比赛日期</th><th>比赛名称</th><th>主办方</th><th>报名截至日期</th><th>链接</th></tr>
-                <tr><td>2021.8.21</td><td>第二届祥云杯网络安全大赛</td><td>吉林省网络安全和信息化委员会办公室、吉林省政务服务和数字化建设管理局、吉林省教育厅</td><td>2020.8.20</td><td><a href="https://xiangyuncup.ichunqiu.com/">https://xiangyuncup.ichunqiu.com/</a></td></tr>
-                <tr><td>2020.7.31</td><td>DASCTF</td><td>安恒信息、杭州电子科技大学网络安全学院</td><td>2020.7.28</td><td><a href="https://buuoj.cn/plugins/ctfd-matches/matches/15">https://buuoj.cn/plugins/ctfd-matches/matches/15</a></td></tr>
-                <tr><td></td><td></td><td></td><td></td><td><a href=""></a></td></tr>
-                <tr><td></td><td></td><td></td><td></td><td><a href=""></a></td></tr>
-                <tr><td></td><td></td><td></td><td></td><td><a href=""></a></td></tr>
-                <tr><td></td><td></td><td></td><td></td><td><a href=""></a></td></tr>
-                <tr><td></td><td></td><td></td><td></td><td><a href=""></a></td></tr>
-                <tr><td></td><td></td><td></td><td></td><td><a href=""></a></td></tr>
-                <tr><td></td><td></td><td></td><td></td><td><a href=""></a></td></tr>
-                <tr><td></td><td></td><td></td><td></td><td><a href=""></a></td></tr>
-                <tr><td></td><td></td><td></td><td></td><td><a href=""></a></td></tr>
-            </table>
+            <!--edited by cortana&杜煜-->
+            <h1 style="margin-left: 0%;">报名中</h1>
+            <div id="available_race">
+                <race_table :data="dt1"></race_table>
+            </div>
+            <br><br><br><br>
+            <h1 style="margin-left: 0%;">报名已截止</h1>
+            <div id="unavailable_race">
+                <race_table :data="dt2"></race_table>
+            </div>
+            <br><br><br><br>
+            <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+            <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+            <script src="./race_data.js"></script>
+            <script src="./race.js"></script>
         </div>
 
 
