@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css"> -->
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <script src="jquery.min.js"></script>
     <style type="text/css">
             .el-table__expand-icon {
             height: 28px;
@@ -181,10 +182,26 @@ table tbody td:hover{
                 <h1 style="font-size: 2.5em;">成都理工大学信息安全协会</h1>
             </div>
         </div>
-        <br><br>
+        <br>
+        <div style="text-align: center;">
+            年份：
+            <select class="ui dropdown" id="year">
+                <option value="1">2022</option>
+                <option value="0">2023</option>
+              </select>
+              月份：
+              <select class="ui dropdown" id="month">
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+            </select>
+        </div>
+
+
+    <div id="2022_6" style="display: block;">
         <div style="width: 90%;margin: auto;height: 800px;">
             <table style="height: 700px;">
-                <caption>五月竞赛时间表</caption>
+                <caption>六月竞赛时间表</caption>
                 <thead>
                     <tr>
                         <th>星期一</th>
@@ -214,7 +231,56 @@ table tbody td:hover{
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div style="text-align: center;">
+            <!--edited by cortana&杜煜-->
+            <h1 style="margin-left: 0%;">报名中</h1>
+            <div id="available_race">
+                <race_table :data="dt1"></race_table>
             </div>
+            <br><br><br><br>
+            <h1 style="margin-left: 0%;">报名已截止</h1>
+            <div id="unavailable_race">
+                <race_table :data="dt2"></race_table>
+            </div>
+            <br><br><br><br>
+        </div>
+    </div>
+
+    <div id="2022_7" style="display: none;">
+        <div style="width: 90%;margin: auto;height: 800px;">
+            <table style="height: 700px;">
+                <caption>七月竞赛时间表</caption>
+                <thead>
+                    <tr>
+                        <th>星期一</th>
+                        <th>星期二</th>
+                        <th>星期三</th>
+                        <th>星期四</th>
+                        <th>星期五</th>
+                        <th>星期六</th>
+                        <th>星期天</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p>1</p><p> </p></td><td><p>2</p><p> </p></td><td><p>3</p><p> </p></td><td><p>4</p><p> </p></td><td><p>5</p><p> </p></td><td><p>6</p><p> </p></td><td style="background-color:#20d0d6;"><p>7</p><p>红帽杯</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>8</p><p> </p></td><td><p>9</p><p> </p></td><td><p>10</p><p> </p></td><td><p>11</p><p> </p></td><td><p>12</p><p> </p></td><td><p>13</p><p> </p></td><td><p>14</p><p> </p></td>
+                    </tr>
+                    <tr>  
+                        <td><p>15</p><p> </p></td><td><p>16</p><p> </p></td><td><p>17</p><p> </p></td><td><p>18</p><p> </p></td><td><p>19</p><p> </p></td><td style="background-color:#20d0d6;"><p>20</p><p>美团杯</p></td><td><p>21</p><p> </p></td>
+                    </tr>
+                    <tr>     
+                        <td><p>22</p><p> </p></td><td><p>23</p><p> </p></td><td><p>24</p><p> </p></td><td><p>25</p><p> </p></td><td><p>26</p><p> </p></td><td><p>27</p><p> </p></td><td><p>28</p><p> </p></td>
+                    </tr>
+                    <tr>   
+                        <td><p>29</p><p> </p></td><td style="background-color:#20d0d6;"><p>30</p><p>国赛作品赛</p></td><td><p>31</p><p> </p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div style="text-align: center;">
             <!--edited by cortana&杜煜-->
             <h1 style="margin-left: 0%;">报名中</h1>
@@ -232,7 +298,56 @@ table tbody td:hover{
             <script src="./race_data.js"></script>
             <script src="./race.js"></script>
         </div>
+    </div>
 
+    <div id="2022_8" style="display: none;">
+        <div style="width: 90%;margin: auto;height: 800px;">
+            <table style="height: 700px;">
+                <caption>八月竞赛时间表</caption>
+                <thead>
+                    <tr>
+                        <th>星期一</th>
+                        <th>星期二</th>
+                        <th>星期三</th>
+                        <th>星期四</th>
+                        <th>星期五</th>
+                        <th>星期六</th>
+                        <th>星期天</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p>1</p><p> </p></td><td><p>2</p><p> </p></td><td><p>3</p><p> </p></td><td><p>4</p><p> </p></td><td><p>5</p><p> </p></td><td><p>6</p><p> </p></td><td style="background-color:#20d0d6;"><p>7</p><p>红帽杯</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>8</p><p> </p></td><td><p>9</p><p> </p></td><td><p>10</p><p> </p></td><td><p>11</p><p> </p></td><td><p>12</p><p> </p></td><td><p>13</p><p> </p></td><td><p>14</p><p> </p></td>
+                    </tr>
+                    <tr>  
+                        <td><p>15</p><p> </p></td><td><p>16</p><p> </p></td><td><p>17</p><p> </p></td><td><p>18</p><p> </p></td><td><p>19</p><p> </p></td><td style="background-color:#20d0d6;"><p>20</p><p>美团杯</p></td><td><p>21</p><p> </p></td>
+                    </tr>
+                    <tr>     
+                        <td><p>22</p><p> </p></td><td><p>23</p><p> </p></td><td><p>24</p><p> </p></td><td><p>25</p><p> </p></td><td><p>26</p><p> </p></td><td><p>27</p><p> </p></td><td><p>28</p><p> </p></td>
+                    </tr>
+                    <tr>   
+                        <td><p>29</p><p> </p></td><td style="background-color:#20d0d6;"><p>30</p><p>国赛作品赛</p></td><td><p>31</p><p> </p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align: center;">
+            <!--edited by cortana&杜煜-->
+            <h1 style="margin-left: 0%;">报名中</h1>
+            <div id="available_race">
+                <race_table :data="dt1"></race_table>
+            </div>
+            <br><br><br><br>
+            <h1 style="margin-left: 0%;">报名已截止</h1>
+            <div id="unavailable_race">
+                <race_table :data="dt2"></race_table>
+            </div>
+            <br><br><br><br>
+        </div>
+    </div>
 
 
         <div class="ui inverted vertical footer segment">
@@ -276,6 +391,27 @@ table tbody td:hover{
                 }
             });
         });
+
+        $('#year').change(function(){
+            change_table();
+        });
+        $('#month').change(function(){
+            change_table();
+        });
+        function none_all(year_all_members)
+        {
+            for(num=1;num<=12;num++)
+            {
+               id = "#"+year_all_members+"_"+num;
+               $(id).css('display','none');
+            }
+        }
+        function change_table(){
+            none_all('2022');
+            none_all('2023');
+            id = '#'+$('#year option:selected').text()+"_"+$('#month option:selected').text();
+            $(id).css('display','block');
+        }
     </script>
 </body>
 </html>
